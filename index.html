@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI-Powered Investment Skill Tracking System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px 10%;
+            background: white;
+            margin-bottom: 10px;
+        }
+
+        h1 { color: white; }
+        h2 { color: #203a43; }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background: #203a43;
+        }
+
+        .tabs button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .tabs button:hover,
+        .tabs button.active {
+            background: #2c5364;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px 10%;
+            background: white;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .card {
+            background: #f9f9f9;
+            padding: 20px;
+            margin-top: 15px;
+            border-left: 5px solid #2c5364;
+            border-radius: 5px;
+        }
+
+        .chart-box {
+            height: 250px;
+            background: linear-gradient(120deg, #dbeafe, #eef2ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #203a43;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            section, .tab-content {
+                padding: 30px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>AI-Powered Investment Skill Tracking & Behavioural Analysis</h1>
+    <p>Hack4 Viksit Bharat Hackathon | FinTech Solution</p>
+</header>
+
+<section>
+    <h2>Problem & Solution Overview</h2>
+    <p>
+        Existing trading platforms focus on profit and loss rather than the quality of decisions.
+        Our system evaluates investor behavior, decision timing, and market awareness using AI,
+        helping users distinguish skill from luck and emotion.
+    </p>
+</section>
+
+<!-- Tabs Navigation -->
+<div class="tabs">
+    <button class="tab-btn active" onclick="openTab('charts')">📊 Charts & Analytics</button>
+    <button class="tab-btn" onclick="openTab('buysell')">🔁 Buy–Sell Visualization</button>
+    <button class="tab-btn" onclick="openTab('news')">📰 News Awareness</button>
+</div>
+
+<!-- Charts Tab -->
+<div id="charts" class="tab-content active">
+    <h2>Charts & Investment Analytics</h2>
+    <div class="card">
+        This section displays historical stock price charts along with technical indicators.
+        It helps users understand whether their investment decisions aligned with market trends.
+    </div>
+    <div class="chart-box">
+        📈 Stock Price & Skill Analysis Chart (Demo)
+    </div>
+</div>
+
+<!-- Buy Sell Visualization Tab -->
+<div id="buysell" class="tab-content">
+    <h2>Buy–Sell Decision Visualization</h2>
+    <div class="card">
+        Buy and sell points are visually marked on historical price charts.
+        Users can clearly see whether their trades were made at technically strong or weak points.
+    </div>
+    <div class="chart-box">
+        🔴 Buy / 🟢 Sell Markers on Price Chart (Demo)
+    </div>
+</div>
+
+<!-- News Tab -->
+<div id="news" class="tab-content">
+    <h2>Stock News & Market Awareness</h2>
+    <div class="card">
+        Before executing a trade, the system checks for active or recent news related to the stock.
+        Users are informed if price movements are influenced by news events rather than fundamentals.
+    </div>
+
+    <div class="card">
+        <strong>Example:</strong><br>
+        📉 Vedanta Ltd price dropped due to recent news.<br>
+        ⚠ This movement may be temporary. Please analyze before investing.
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Hack4 Viksit Bharat | AI-Driven FinTech Innovation</p>
+</footer>
+
+<script>
+    function openTab(tabId) {
+        const tabs = document.querySelectorAll('.tab-content');
+        const buttons = document.querySelectorAll('.tab-btn');
+
+        tabs.forEach(tab => tab.classList.remove('active'));
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        document.getElementById(tabId).classList.add('active');
+        event.target.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
